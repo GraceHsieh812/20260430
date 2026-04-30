@@ -5,39 +5,42 @@
   box-sizing: border-box;
 }
 
-/* Base - 森林系配色調整 */
+/* Base - 文青森林系配色與字體 */
 body {
-  font-family: "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f1f8e9; /* 極淺的森林綠背景 */
-  color: #2d3a3a; /* 深苔蘚綠文字，取代純黑 */
+  font-family: 'Montserrat', 'Noto Serif TC', serif;
+  font-weight: 300;
+  line-height: 1.8;
+  background-color: #f1f8e9;
+  color: #2d3a3a;
+  letter-spacing: 0.05em;
 }
 
 a {
-  color: #4f772d; /* 森林深綠 */
+  color: #4f772d;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 a:hover {
-  color: #90a955; /* 滑過時變為嫩草綠 */
+  color: #90a955;
 }
 
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
+  position: relative;
 }
 
-/* Navbar - 保持透明感或淡色 */
+/* Navbar */
 .navbar {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
-  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 1.2rem 0;
   position: sticky;
   top: 0;
   border-bottom: 1px solid #ddecce;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .navbar .container {
@@ -47,130 +50,184 @@ a:hover {
 }
 
 .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
   color: #31572c;
-  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.logo-dot {
+  color: #90a955;
 }
 
 .navbar nav a {
-  margin-left: 1.5rem;
-  font-weight: 500;
+  margin-left: 1.8rem;
+  font-weight: 400;
+  font-size: 0.95rem;
   color: #31572c;
 }
 
-/* Hero - 森林呼吸感 */
+/* Hero */
 .hero {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   text-align: center;
-  background: linear-gradient(180deg, #f1f8e9 0%, #d8e9d2 100%); /* 漸層綠 */
+  background: linear-gradient(180deg, #f1f8e9 0%, #e8f5e9 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: 3rem;
   margin-bottom: 1rem;
   color: #132a13;
+  letter-spacing: 0.1em;
 }
 
 .hero-subtitle {
-  margin-bottom: 2rem;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 400;
+  margin-bottom: 3rem;
   color: #4f772d;
-  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
-/* Buttons - 圓角與大自然配色 */
+/* 大頭照樣式 */
+.hero-avatar {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-avatar img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #faf3e0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* 插畫定位 (SVG) */
+.deco-hero-grass {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.deco-about-flower {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Buttons */
 .btn {
-  padding: 0.8rem 1.8rem;
-  border-radius: 50px; /* 圓潤感更符合森林系 */
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.8rem 2.2rem;
+  border-radius: 50px;
   font-size: 0.9rem;
-  font-weight: 600;
-  transition: transform 0.2s;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  letter-spacing: 0.1em;
 }
 
 .btn:hover {
   transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(79, 119, 45, 0.2);
 }
 
 .primary {
   background: #4f772d;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(79, 119, 45, 0.3);
 }
 
 .secondary {
-  border: 2px solid #4f772d;
+  border: 1px solid #4f772d;
   color: #4f772d;
+}
+
+.secondary:hover {
+  background: rgba(79, 119, 45, 0.05);
 }
 
 /* Sections */
 .section {
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .section-title {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   color: #31572c;
-  position: relative;
   display: inline-block;
+  position: relative;
+  letter-spacing: 0.15em;
 }
 
-/* 標題小裝飾：底部的淡綠色線條 */
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 60%;
-  height: 4px;
-  background: #90a955;
-  border-radius: 2px;
-}
-
-/* About */
-.about-text {
-  max-width: 650px;
-  color: #3e4c3e;
-  font-size: 1.1rem;
+/* About & Card */
+.card {
   background: white;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* 輕微陰影提升質感 */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.about-text {
+  max-width: 680px;
+  font-family: 'Noto Serif TC', serif;
+  color: #3e4c3e;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
 }
 
 /* Contact */
 .contact-list p {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Footer */
 .footer {
   text-align: center;
   padding: 3rem 0;
-  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
   color: #90a955;
   border-top: 1px solid #ddecce;
+  letter-spacing: 0.1em;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
-
+  
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
 
   .btn {
-    width: 200px;
+    width: 220px;
   }
 }
