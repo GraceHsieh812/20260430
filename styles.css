@@ -5,17 +5,22 @@
   box-sizing: border-box;
 }
 
-/* Base */
+/* Base - 森林系配色調整 */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
   line-height: 1.6;
-  background-color: #0f172a;
-  color: #e2e8f0;
+  background-color: #f1f8e9; /* 極淺的森林綠背景 */
+  color: #2d3a3a; /* 深苔蘚綠文字，取代純黑 */
 }
 
 a {
-  color: #38bdf8;
+  color: #4f772d; /* 森林深綠 */
   text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #90a955; /* 滑過時變為嫩草綠 */
 }
 
 .container {
@@ -24,12 +29,15 @@ a {
   margin: auto;
 }
 
-/* Navbar */
+/* Navbar - 保持透明感或淡色 */
 .navbar {
-  background: #020617;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
   padding: 1rem 0;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid #ddecce;
+  z-index: 100;
 }
 
 .navbar .container {
@@ -38,26 +46,36 @@ a {
   align-items: center;
 }
 
-.navbar nav a {
-  margin-left: 1.5rem;
+.logo {
+  color: #31572c;
+  font-weight: bold;
 }
 
-/* Hero */
+.navbar nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  color: #31572c;
+}
+
+/* Hero - 森林呼吸感 */
 .hero {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   text-align: center;
+  background: linear-gradient(180deg, #f1f8e9 0%, #d8e9d2 100%); /* 漸層綠 */
 }
 
 .hero-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #132a13;
 }
 
 .hero-subtitle {
   margin-bottom: 2rem;
-  color: #94a3b8;
+  color: #4f772d;
+  font-weight: 500;
 }
 
 .hero-buttons {
@@ -66,62 +84,93 @@ a {
   gap: 1rem;
 }
 
-/* Buttons */
+/* Buttons - 圓角與大自然配色 */
 .btn {
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px; /* 圓潤感更符合森林系 */
   font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
 }
 
 .primary {
-  background: #38bdf8;
-  color: #020617;
+  background: #4f772d;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(79, 119, 45, 0.3);
 }
 
 .secondary {
-  border: 1px solid #38bdf8;
+  border: 2px solid #4f772d;
+  color: #4f772d;
 }
 
 /* Sections */
 .section {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .section-title {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #31572c;
+  position: relative;
+  display: inline-block;
+}
+
+/* 標題小裝飾：底部的淡綠色線條 */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: #90a955;
+  border-radius: 2px;
 }
 
 /* About */
 .about-text {
-  max-width: 600px;
-  color: #cbd5f5;
+  max-width: 650px;
+  color: #3e4c3e;
+  font-size: 1.1rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* 輕微陰影提升質感 */
 }
 
 /* Contact */
 .contact-list p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
 }
 
 /* Footer */
 .footer {
   text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.8rem;
-  color: #64748b;
+  padding: 3rem 0;
+  font-size: 0.9rem;
+  color: #90a955;
+  border-top: 1px solid #ddecce;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .hero-buttons {
     flex-direction: column;
+    align-items: center;
   }
 
-  .navbar nav a {
-    margin-left: 1rem;
+  .btn {
+    width: 200px;
   }
 }
