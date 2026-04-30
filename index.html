@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hsien-En Portfolio</title>
+  <title>謝昕恩 Hsien-En | 森林系作品集</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Hsien-En</h1>
+      <h1 class="logo">H<span class="logo-dot">.</span>En</h1>
       <nav>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -19,12 +23,21 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
+    <svg class="deco-hero-grass" width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 150C30 150 45 100 70 90C95 80 120 100 120 100M120 100C120 100 135 60 160 50C185 40 210 60 210 60" stroke="#90a955" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 150C10 150 20 120 40 115C60 110 80 125 80 125" stroke="#4f772d" stroke-width="2" stroke-linecap="round"/>
+      <path d="M100 150C100 150 110 130 130 125C150 120 170 135 170 135" stroke="#4f772d" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
     <div class="container hero-content">
-      <h2 class="hero-title">謝昕恩 Hsien-En Hsieh</h2>
+      <div class="hero-avatar">
+        <img src="https://i.pinimg.com/originals/13/6a/d2/136ad2e2455b5501309d43501061f237.jpg" alt="昕恩大頭照" />
+      </div>
+
+      <h2 class="hero-title">謝昕恩</h2>
       <p class="hero-subtitle">
-        嗨嗨
+        前端開發者，專注於打造簡潔且高效的使用者體驗
       </p>
       <div class="hero-buttons">
         <a href="#about" class="btn primary">View Work</a>
@@ -33,25 +46,28 @@
     </div>
   </section>
 
-  <!-- About -->
   <section id="about" class="about section">
     <div class="container">
+      <svg class="deco-about-flower" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 50C30 50 30 35 30 20M30 20C30 20 20 15 15 20C10 25 15 30 20 30C25 30 30 25 30 25M30 20C30 20 40 15 45 20C50 25 45 30 40 30C35 30 30 25 30 25M30 35C30 35 22 38 20 42C18 46 22 50 26 50C30 50 32 46 32 42" stroke="#90a955" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="30" cy="18" r="3" fill="#e9c46a"/>
+      </svg>
+      
       <h2 class="section-title">About Me</h2>
       <p class="about-text">
-        法律系大學生，好想躺平
-        躺著
+        我是一位對 Web 開發充滿熱情的工程師，喜歡將想法轉化為實際產品。
+        專注於前端技術與使用者體驗設計，持續學習並打造高品質的專案。
       </p>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="contact section">
     <div class="container">
       <h2 class="section-title">Contact</h2>
-      <div class="contact-list">
+      <div class="contact-list card">
         <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-        <p>GitHub: <a href="#" target="_blank">https://github.com/yourname</a></p>
-        <p>LinkedIn: <a href="#" target="_blank">https://linkedin.com/in/yourname</a></p>
+        <p>GitHub: <a href="#" target="_blank">github.com/yourname</a></p>
+        <p>LinkedIn: <a href="#" target="_blank">linkedin.com/yourname</a></p>
       </div>
     </div>
   </section>
